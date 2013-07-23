@@ -1,18 +1,18 @@
 name: golang
 version: 0.8.2
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
-type : main
-platform : ubuntu@12.04
-description : golang
+type: main
+platform: ubuntu@12.04
+description: golang
 keywords:
   - golang
   - go
-packages :
+packages:
   - golang@1.1.1
   - git
   - mercurial
   - bzr
-script : |
+script: |
   sudo apt-get update
   sudo apt-get install bzr
   sudo apt-get install mercurial
@@ -22,15 +22,15 @@ script : |
   rm go1.1.linux-amd64.tar.gz
 
 box-detect:
-  priority : 900
-  version :
+  priority: 900
+  version:
   detect:
     - files:
       - .godir
 
 default-build:
   python:
-    priority : 50
+    priority: 50
     detect:
       - default: true
     text-to-append: |
