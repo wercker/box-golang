@@ -1,18 +1,18 @@
 name: golang
-version: 0.8.2
+version: 1.0.1
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
-type: main
-platform: ubuntu@12.04
-description: golang
+type : main
+platform : ubuntu@12.04
+description : golang
 keywords:
   - golang
   - go
-packages:
+packages :
   - golang@1.1.1
   - git
   - mercurial
   - bzr
-script: |
+script : |
   sudo apt-get update
   sudo apt-get install bzr
   sudo apt-get install mercurial
@@ -21,16 +21,32 @@ script: |
   echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee -a /etc/profile
   rm go1.1.linux-amd64.tar.gz
 
+  # Set GOPATH
+  export GOPATH="$HOME/go"
+  echo 'export GOPATH="$HOME/go"' | sudo tee -a /etc/profile
+
+  # Adds go bin directory to path so tools
+  # and buils are available on the commandline
+  export PATH="$PATH:$GOPATH/bin"
+  echo 'export PATH="$PATH:$GOPATH/bin"' | sudo tee -a /etc/profile
+
+  # Make actual go workspace dir structure
+  mkdir -p "$HOME/go/{src,pkg,bin}"
+
 box-detect:
-  priority: 900
-  version:
+  priority : 900
+  version :
   detect:
     - files:
       - .godir
+    - files:
+      - main.go
+    - files:
+      - app.go
 
 default-build:
   python:
-    priority: 50
+    priority : 50
     detect:
       - default: true
     text-to-append: |
@@ -40,16 +56,10 @@ default-build:
         steps:
           - script:
               name: setup golang
-              code: |
-                mkdir $HOME/mygo
-                export GOPATH=$HOME/mygo
-                export PATH=$PATH:$GOPATH/bin
-                mkdir $GOPATH/bin
-                mkdir $GOPATH/pkg
-                if test "${$WERCKER_GIT_REPOSTORY+set}" == set; then mkdir -p "$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSTORY"; else ln -s $WERCKER_SOURCE_DIR $GOPATH/src; fi
-                if test "${$WERCKER_GIT_REPOSTORY+set}" == set; then cp -R "$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSTORY";  fi
-                if test "${$WERCKER_GIT_REPOSTORY+set}" == set; then export WERCKER_ROOT="$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSTORY"; fi
-                if test "${$WERCKER_GIT_REPOSTORY+set}" == set; then export WERCKER_SOURCE_DIR="$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSTORY"; fi
+              code: |-
+                if test "${WERCKER_GIT_REPOSITORY+set}" == set; then mkdir -p "$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY"; else ln -s $WERCKER_SOURCE_DIR $GOPATH/src; fi
+                if test "${WERCKER_GIT_REPOSITORY+set}" == set; then cp -R $WERCKER_SOURCE_DIR/* "$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY"; fi
+                if test "${WERCKER_GIT_REPOSITORY+set}" == set; then export WERCKER_SOURCE_DIR="$GOPATH/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY"; fi
           - script:
               name: go get
               code: |
@@ -59,7 +69,7 @@ default-build:
           - script:
               name: go build
               code: |
-                go build .
+                go build
           - script:
               name: go test
               code: |
