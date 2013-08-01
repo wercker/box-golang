@@ -4,8 +4,9 @@ golang
 
 # What's new
 
-- Lock apt cookbook to 1.8.2
-- Update readme
+- Install Go 1.1.1 from golang.org
+- Improve Go language detection
+- Use setup-go-workspace step to setup the workspace in default wercker.yml
 
 # License
 
@@ -31,6 +32,12 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 1.0.0
+
+- Install Go 1.1.1 from golang.org
+- Improve Go language detection
+- Use setup-go-workspace step to setup the workspace in default wercker.yml
 
 ## 0.8.2
 
