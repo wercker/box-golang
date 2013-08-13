@@ -4,9 +4,7 @@ golang
 
 # What's new
 
-- Install Go 1.1.1 from golang.org
-- Improve Go language detection
-- Use setup-go-workspace step to setup the workspace in default wercker.yml
+- Install Go 1.1.2 from golang.org
 
 # License
 
@@ -32,6 +30,10 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 1.0.1
+
+- Install Go 1.1.2 from golang.org
 
 ## 1.0.0
 
