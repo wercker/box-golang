@@ -1,5 +1,5 @@
 name: golang
-version: 1.0.0
+version: 1.0.1
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -8,7 +8,7 @@ keywords:
   - golang
   - go
 packages :
-  - golang@1.1.1
+  - golang@1.1.2
   - git
   - mercurial
   - bzr
@@ -16,10 +16,10 @@ script : |
   sudo apt-get update
   sudo apt-get install bzr
   sudo apt-get install mercurial
-  wget https://go.googlecode.com/files/go1.1.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf go1.1.linux-amd64.tar.gz
+  wget https://go.googlecode.com/files/go1.1.2.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go1.1.2.linux-amd64.tar.gz
   echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee -a /etc/profile
-  rm go1.1.linux-amd64.tar.gz
+  rm go1.1.2.linux-amd64.tar.gz
 
   # Set GOPATH
   export GOPATH="$HOME/go"
