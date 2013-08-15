@@ -31,6 +31,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 1.0.2
+
+- correct go build command
+
 ## 1.0.1
 
 - Install Go 1.1.2 from golang.org
