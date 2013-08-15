@@ -1,5 +1,5 @@
 name: golang
-version: 1.0.1
+version: 1.0.2
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -72,8 +72,7 @@ default-build:
           - script:
               name: go build
               code: |
-                go
-                 build ./...
+                go build ./...
 
           # Test the project
           - script:
