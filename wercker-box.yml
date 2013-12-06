@@ -19,7 +19,7 @@ script : |
   wget http://go.googlecode.com/files/go1.2.linux-amd64.tar.gz
   sudo tar -C /usr/local -xzf go1.2.linux-amd64.tar.gz
   echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee -a /etc/profile
-  rm go1.1.2.linux-amd64.tar.gz
+  rm go1.2.linux-amd64.tar.gz
 
   # Set GOPATH
   export GOPATH="$HOME/go"
