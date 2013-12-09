@@ -4,6 +4,7 @@ Box that runs Go.
 
 # What's new
 
+- Default wercker.yml suggests `go get` with `-t` argument to include test dependencies
 - Update Go to 1.2
 - Update [`web-essentials`](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) to 1.0.0
 
@@ -12,6 +13,10 @@ Box that runs Go.
 The MIT License (MIT)
 
 # Changelog
+
+## 1.1.1
+
+- Default wercker.yml suggests `go get` with `-t` argument to include test dependencies
 
 ## 1.1.0
 
