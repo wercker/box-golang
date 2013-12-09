@@ -68,7 +68,7 @@ default-build:
               code: |
                 cd $WERCKER_SOURCE_DIR
                 go version
-                go get ./...
+                go get -t ./...
 
           # Build the project
           - script:
