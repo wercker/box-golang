@@ -1,8 +1,8 @@
-[![wercker status](https://app.wercker.com/status/cb0eb61be1b3e5bb4bc2c475d2c3e7c8/m "wercker status")](https://app.wercker.com/project/bykey/cb0eb61be1b3e5bb4bc2c475d2c3e7c8)
-
 # golang box
 
 Box that runs Go.
+
+[![wercker status](https://app.wercker.com/status/cb0eb61be1b3e5bb4bc2c475d2c3e7c8/m "wercker status")](https://app.wercker.com/project/bykey/cb0eb61be1b3e5bb4bc2c475d2c3e7c8)
 
 # What's new
 
