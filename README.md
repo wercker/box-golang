@@ -1,20 +1,21 @@
 # golang box
 
-Box that runs Go 1.2.
+Box that runs Go 1.2.1
 
 [![wercker status](https://app.wercker.com/status/cb0eb61be1b3e5bb4bc2c475d2c3e7c8/m "wercker status")](https://app.wercker.com/project/bykey/cb0eb61be1b3e5bb4bc2c475d2c3e7c8)
 
 # What's new
 
-- Default wercker.yml suggests `go get` with `-t` argument to include test dependencies
-- Update Go to 1.2
-- Update [`web-essentials`](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) to 1.0.0
+- Update Go to 1.2.1
 
 # License
 
 The MIT License (MIT)
 
 # Changelog
+
+## 1.1.2
+- Update Go to 1.2.1
 
 ## 1.1.1
 
