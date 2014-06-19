@@ -6,13 +6,17 @@ Box that runs Go 1.2.1
 
 # What's new
 
-- Update Go to 1.2.1
+- Update Go to 1.3
 
 # License
 
 The MIT License (MIT)
 
 # Changelog
+
+## 1.1.3
+- Update Go to 1.3
+- Get binary from new download site golang.org/dl/...
 
 ## 1.1.2
 - Update Go to 1.2.1
