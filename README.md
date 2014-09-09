@@ -14,7 +14,7 @@ The MIT License (MIT)
 
 # Changelog
 
-## 1.2.0
+## 1.2.2
 
 - Update Go to 1.3.1
 - Get binary from new download site golang.org/dl/...
