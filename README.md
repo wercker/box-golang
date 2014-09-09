@@ -17,6 +17,11 @@ The MIT License (MIT)
 ## 1.2.2
 
 - Update Go to 1.3.1
+- Update [`web-essentials`](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) to 1.0.4
+
+## 1.2.0
+
+- Update Go to 1.3
 - Get binary from new download site golang.org/dl/...
 
 ## 1.1.2
