@@ -14,7 +14,7 @@ The MIT License (MIT)
 
 # Changelog
 
-## 1.2.2
+## 1.2.1
 
 - Update Go to 1.3.1
 - Update [`web-essentials`](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) to 1.0.4
