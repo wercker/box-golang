@@ -1,5 +1,5 @@
 name: golang
-version: 1.2.4rc
+version: 1.2.4
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type : main
 platform : ubuntu@12.04
