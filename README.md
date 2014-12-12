@@ -14,7 +14,7 @@ The MIT License (MIT)
 
 # Changelog
 
-## 1.2.4
+## 1.3.0
 
 - Update Go to 1.4
 
