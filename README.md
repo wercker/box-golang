@@ -1,18 +1,22 @@
 # golang box
 
-Box that runs Go 1.3.3
+Box that runs Go 1.4
 
 [![wercker status](https://app.wercker.com/status/cb0eb61be1b3e5bb4bc2c475d2c3e7c8/m "wercker status")](https://app.wercker.com/project/bykey/cb0eb61be1b3e5bb4bc2c475d2c3e7c8)
 
 # What's new
 
-- Update Go to 1.3.3
+- Update Go to 1.4
 
 # License
 
 The MIT License (MIT)
 
 # Changelog
+
+## 1.2.4
+
+- Update Go to 1.4
 
 ## 1.2.3
 
