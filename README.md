@@ -6,7 +6,7 @@ Box that runs Go 1.4.1
 
 # What's new
 
-- Update Go to 1.4.1
+- Update Go to 1.4.2
 
 # License
 
