@@ -8,12 +8,12 @@ keywords:
   - golang
   - go
 packages :
-  - golang@1.4.1
+  - golang@1.4.2
   - git
   - mercurial
   - bzr
 script : |
-  version="1.4.1"
+  version="1.4.2"
 
   sudo apt-get update
   sudo apt-get install bzr
