@@ -1,5 +1,5 @@
 name: golang
-version: 1.3.2
+version: 1.3.3
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type : main
 platform : ubuntu@12.04
@@ -47,6 +47,8 @@ box-detect:
       - app.go
     - files:
       - server.go
+    - partOfFiles:
+      - ".go"  
 
 default-build:
   go:
