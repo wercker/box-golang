@@ -6,14 +6,17 @@ Box that runs latest stable version of Go.
 
 # What's new
 
-- Added detection for any `.go` files
-- Update Go to 1.4.2
+- Update Go to 1.5
 
 # License
 
 The MIT License (MIT)
 
 # Changelog
+
+## 1.4
+
+- Update Go to 1.5
 
 ## 1.3.2
 
