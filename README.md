@@ -6,13 +6,17 @@ Box that runs latest stable version of Go.
 
 # What's new
 
-- Update Go to 1.5
+- Update Go to 1.5.1
 
 # License
 
 The MIT License (MIT)
 
 # Changelog
+
+## 1.4.1
+
+- Update Go to 1.5.1
 
 ## 1.4
 
